@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>form</title></head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="myscript.js">
+<body>
+
+<header>
+	<h1>Contact Form</h1>
+	<div class="icon-bar">
+	<a class="active" href="index.html"><i class="fa fa-home"></i></a>
+	<a href="https://mail.google.com/mail/u/1/#inbox"><i class="fa fa-envelope"></i></a>
+	<a href="https://www.google.com/search?sa=X&sxsrf=ALeKk024KUH25U-QsIueS83J-OP4TYZAvg:1587100407248&q=moviesflix+messenger&tbm=isch&source=univ&ved=2ahUKEwjbtvzf2e7oAhWDd98KHRcsB6sQsAR6BAgJEAE&biw=1366&bih=657"><i class="fa fa-globe"></i></a>
+	<a href="#"><i class="fa fa-trash"></i></a>
+	<div class="dropdown">
+    <button class="dropbtn">Movie<i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-content">
+    <a href="game_of_thrones.html">G.O.T.</a>
+    <a href="friends.html">FRIENDS</a>
+    <a href="narcos.html">NARCOS</a>
+    </div>
+	</div>
+	</div>
+</header>
+
+<main>
+
+	<div class="container">
+    <form action="payment.php" method="post">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+	<label for="email">Email</label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+    <label for="password">Password</label>
+    <input type="password" placeholder="Password" id="password" required>
+    <label for="confirm_password">Confirm Passwords</label>
+    <input type="password" placeholder="Confirm Password" id="confirm_password" required>
+
+    <button type="submit" class="pure-button pure-button-primary">Confirm</button>
+
+    <br>
+    <label for="country">country</label>
+    <select id="country" name="country">
+    <option value="australia">Australia</option>
+    <option value="canada">Canada</option>
+    <option value="usa">USA</option>
+	<option value="india">India</option>
+	<option value="afghanistan">Afghanistan</option>
+	<option value="newzealand">New Zealand</option>
+	<option value="columbia">Columbia</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    
+	<input type="submit" value="Proceed to Payment" class="button">
+	<!--<a href="payment.html">Proceed to Payment</a><br><br>-->
+	
+	Notification <label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+    </label>
+    </form>
+</div>
+</main>
+
+<footer>
+<center>
+	<p><small>©2020 MOVIEFLIX - Free Movies TV Shows - All rights reserved.</small>
+		<a href="Privacy-Policy.html">Privacy Policy</a> | 
+		<a href="terms-of-use.html" >Terms of Condition*</a>
+	</p>
+	<p>
+	Disclaimer: All of the free movies found on this website are hosted on third-party servers that are freely 
+	available to watch online on this Website - Free Movies TV Shows for all internet users. Any legal issues
+	regarding the free online movies on this website should be taken up with the actual file hosts themselves. 
+	this Website - Free Movies TV Shows is not responsible for the accuracy, compliance, copyright, legality, 
+	decency, or any other aspect of the content of other linked sites. In case of any copyright claims, Please 
+	contact the source websites directly file owners or host sites. By accessing this site you agree to be bound by our Privacy Policy.
+	</p>	
+	</center>
+</footer>
+
+</body>
+
+</html>
+<script>
+    var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+</script>
